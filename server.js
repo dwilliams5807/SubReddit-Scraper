@@ -27,7 +27,7 @@ app.use(express.static("public"));
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/redditscraper", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/redditscraper", { useNewUrlParser: true });
 
 // Routes
 app.get("/", function(req, res) {
