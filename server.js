@@ -27,7 +27,7 @@ app.use(express.static("public"));
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var PORT = process.env.PORT || 3000;
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/redditscraper";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/redditscraper", { useNewUrlParser: true });
