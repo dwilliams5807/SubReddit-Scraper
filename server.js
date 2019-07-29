@@ -34,7 +34,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 app.get("/", function(req, res) {
-  res.send(index.html);
+  res.send("./public/index.html");
 });
 
 
@@ -70,24 +70,25 @@ app.get("/scrape", function(req, res) {
       //     })
         // }
       })
-      // db.Article.insertMany(arrData).then(function(response){
-      //   res.json(response);
-      // })
-      for (let i = 0; i < arrData.length; i++) {
-        const element = arrData[i];
-         db.Article.insert(element).then(function(response){
-          console.log(response)
-        }).catch(function(err){
-          console.log(err);
-        })
-        res.json(arrData);
-      }
-      }).catch(function(err) {
-        res.json(err);;
+
+      db.Article.insertMany(arrData).then(function(response){
+        res.json(response);
       })
+      // for (let i = 0; i < arrData.length; i++) {
+      //   const element = arrData[i];
+      //    db.Article.insert(element).then(function(response){
+      //     console.log(response)
+      //   }).catch(function(err){
+      //     console.log(err);
+      //   })
+      //   res.json(arrData);
+      // }
+      // }).catch(function(err) {
+      //   res.json(err);;
+      // })
 
     });
-
+  });
 
 
 // Route for getting all Articles from the db
