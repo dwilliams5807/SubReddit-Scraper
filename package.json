@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "heroku": "^7.26.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.6.6",
     "morgan": "^1.9.1",
     "node": "^12.7.0",
